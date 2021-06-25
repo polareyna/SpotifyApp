@@ -1,0 +1,7 @@
+<div class="row">
+    <div class="col">
+        <input #keyword type="text" (keyup)="searchAlbums(keyword.value)" class="form-control" placeholder="Find Baekhyun Music (or non Baekhyuns)">
+    </div>
+</div>
+<app-loading *ngIf="loading"></app-loading>
+<app-cards *ngIf="!loading" [items]= "artistData"></app-cards>

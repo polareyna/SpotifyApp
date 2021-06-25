@@ -1,0 +1,12 @@
+<div class="row row-cols-1 row-cols-md-4 g-4 m-5 animated fadeIn puntero">
+    <div (click)="goToArtistProfile( item )" class="col-2 pointer" *ngFor="let item of items">
+        <div class="card" >
+            <img class="card-img-top" src="{{ item.images | noImage }}" alt="{{ item.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.name }}</h5>
+          <p class="card-text"> <strong> Release Date :{{ item.release_date | date:yy}}</strong></p>
+          <a href="{{ item.external_urls.spotify }}" class="btn btn-primary"> Listen on Spotify </a>
+        </div>
+      </div>
+    </div>
+</div>
